@@ -1,0 +1,3 @@
+<ng-container *ngFor="let item of paginationModel; trackBy: trackByKey">
+  <ng-container *ngTemplateOutlet="getTemplateRefForItem(item); context: getContextForItem(item)"></ng-container>
+</ng-container>
