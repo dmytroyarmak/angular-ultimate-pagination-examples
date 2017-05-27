@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PaginationConfigFormComponent } from './pagination-config-form/pagination-config-form.component';
 import { PaginationWithoutCustomizationComponent } from './pagination-without-customization/pagination-without-customization.component';
+import { PaginationExplicitTemplateCustomizationComponent } from './pagination-explicit-template-customization/pagination-explicit-template-customization.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginationConfigFormComponent,
-    PaginationWithoutCustomizationComponent
+    PaginationWithoutCustomizationComponent,
+    PaginationExplicitTemplateCustomizationComponent
   ],
   imports: [
     BrowserModule,

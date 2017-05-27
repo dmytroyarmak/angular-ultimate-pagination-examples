@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaginationComponent } from './pagination.component';
+import { PaginationWithoutCustomizationComponent } from './pagination-without-customization.component';
 
-describe('PaginationComponent', () => {
-  let component: PaginationComponent;
-  let fixture: ComponentFixture<PaginationComponent>;
+describe('PaginationWithoutCustomizationComponent', () => {
+  let component: PaginationWithoutCustomizationComponent;
+  let fixture: ComponentFixture<PaginationWithoutCustomizationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaginationComponent ]
+      declarations: [ PaginationWithoutCustomizationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PaginationComponent);
+    fixture = TestBed.createComponent(PaginationWithoutCustomizationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

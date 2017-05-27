@@ -1,7 +1,7 @@
 <h1>angular-ultimate-pagination</h1>
 <ultimate-pagination-config-form [(config)]="config"></ultimate-pagination-config-form>
 <fieldset>
-    <legend>Live example</legend>
+    <legend>Live example (Without Customization)</legend>
     <ultimate-pagination-without-customization
         [(currentPage)]="config.currentPage"
         [totalPages]="config.totalPages"
@@ -11,4 +11,47 @@
         [hideFirstAndLastPageLinks]="config.hideFirstAndLastPageLinks"
         [hideEllipsis]="config.hideEllipsis"
     ></ultimate-pagination-without-customization>
+</fieldset>
+<fieldset>
+    <legend>Live example (Template Customization)</legend>
+    <ultimate-pagination-explicit-template-customization
+        [(currentPage)]="config.currentPage"
+        [totalPages]="config.totalPages"
+        [boundaryPagesRange]="config.boundaryPagesRange"
+        [siblingPagesRange]="config.siblingPagesRange"
+        [hidePreviousAndNextPageLinks]="config.hidePreviousAndNextPageLinks"
+        [hideFirstAndLastPageLinks]="config.hideFirstAndLastPageLinks"
+        [hideEllipsis]="config.hideEllipsis"
+
+        [pageTemplateRef]="page"
+        [ellipsisTemplateRef]="ellipsis"
+        [firstPageLinkTemplateRef]="firstPageLink"
+        [previousPageLinkTemplateRef]="previousPageLink"
+        [nextPageLinkTemplateRef]="nextPageLink"
+        [lastPageLinkTemplateRef]="lastPageLink"
+    ></ultimate-pagination-explicit-template-customization>
+
+    <ng-template #page let-item let-onClick="onClick">
+      <button (click)="onClick()" [style.fontWeight]="item.isActive ? 'bold' : 'normal'">{{item.value}}</button>
+    </ng-template>
+
+    <ng-template #ellipsis let-onClick="onClick">
+      <button (click)="onClick()">...</button>
+    </ng-template>
+
+    <ng-template #firstPageLink let-onClick="onClick">
+      <button (click)="onClick()">First</button>
+    </ng-template>
+
+    <ng-template #previousPageLink let-onClick="onClick">
+      <button (click)="onClick()">Prev</button>
+    </ng-template>
+
+    <ng-template #nextPageLink let-onClick="onClick">
+      <button (click)="onClick()">Next</button>
+    </ng-template>
+
+    <ng-template #lastPageLink let-onClick="onClick">
+      <button (click)="onClick()">Last</button>
+    </ng-template>
 </fieldset>
