@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'app-pagination-config-form',
+  selector: 'ultimate-pagination-config-form',
   templateUrl: './pagination-config-form.component.html',
   styleUrls: ['./pagination-config-form.component.css']
 })
