@@ -2,12 +2,12 @@ import { Component, OnChanges, Input, Output, EventEmitter, ChangeDetectionStrat
 import { getPaginationModel, PaginationModelItem, ITEM_TYPES } from 'ultimate-pagination';
 
 @Component({
-  selector: 'ultimate-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.css'],
+  selector: 'ultimate-pagination-without-customization',
+  templateUrl: './pagination-without-customization.component.html',
+  styleUrls: ['./pagination-without-customization.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PaginationComponent implements OnChanges {
+export class PaginationWithoutCustomizationComponent implements OnChanges {
   ITEM_TYPES;
   paginationModel: PaginationModelItem[];
   @Input() currentPage;

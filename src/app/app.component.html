@@ -2,7 +2,7 @@
 <ultimate-pagination-config-form [(config)]="config"></ultimate-pagination-config-form>
 <fieldset>
     <legend>Live example</legend>
-    <ultimate-pagination
+    <ultimate-pagination-without-customization
         [(currentPage)]="config.currentPage"
         [totalPages]="config.totalPages"
         [boundaryPagesRange]="config.boundaryPagesRange"
@@ -10,5 +10,5 @@
         [hidePreviousAndNextPageLinks]="config.hidePreviousAndNextPageLinks"
         [hideFirstAndLastPageLinks]="config.hideFirstAndLastPageLinks"
         [hideEllipsis]="config.hideEllipsis"
-    ></ultimate-pagination>
+    ></ultimate-pagination-without-customization>
 </fieldset>
