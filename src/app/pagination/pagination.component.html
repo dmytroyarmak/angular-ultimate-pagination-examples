@@ -1,0 +1,22 @@
+<ng-container *ngFor="let item of paginationModel; trackBy: trackByKey">
+  <ng-container [ngSwitch]="item.type">
+    <ng-container *ngSwitchCase="ITEM_TYPES.PAGE">
+      <button (click)="onItemClick(item)" [style.fontWeight]="item.isActive ? 'bold' : 'normal'">{{item.value}}</button>
+    </ng-container>
+    <ng-container *ngSwitchCase="ITEM_TYPES.ELLIPSIS">
+      <button (click)="onItemClick(item)">...</button>
+    </ng-container>
+    <ng-container *ngSwitchCase="ITEM_TYPES.FIRST_PAGE_LINK">
+      <button (click)="onItemClick(item)">First</button>
+    </ng-container>
+    <ng-container *ngSwitchCase="ITEM_TYPES.PREVIOUS_PAGE_LINK">
+      <button (click)="onItemClick(item)">Prev</button>
+    </ng-container>
+    <ng-container *ngSwitchCase="ITEM_TYPES.NEXT_PAGE_LINK">
+      <button (click)="onItemClick(item)">Next</button>
+    </ng-container>
+    <ng-container *ngSwitchCase="ITEM_TYPES.LAST_PAGE_LINK">
+      <button (click)="onItemClick(item)">Last</button>
+    </ng-container>
+  </ng-container>
+</ng-container>

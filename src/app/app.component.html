@@ -1,3 +1,14 @@
 <h1>angular-ultimate-pagination</h1>
 <ultimate-pagination-config-form [(config)]="config"></ultimate-pagination-config-form>
-<pre>{{config | json}}</pre>
+<fieldset>
+    <legend>Live example</legend>
+    <ultimate-pagination
+        [(currentPage)]="config.currentPage"
+        [totalPages]="config.totalPages"
+        [boundaryPagesRange]="config.boundaryPagesRange"
+        [siblingPagesRange]="config.siblingPagesRange"
+        [hidePreviousAndNextPageLinks]="config.hidePreviousAndNextPageLinks"
+        [hideFirstAndLastPageLinks]="config.hideFirstAndLastPageLinks"
+        [hideEllipsis]="config.hideEllipsis"
+    ></ultimate-pagination>
+</fieldset>

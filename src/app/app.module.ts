@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PaginationConfigFormComponent } from './pagination-config-form/pagination-config-form.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaginationConfigFormComponent
+    PaginationConfigFormComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
