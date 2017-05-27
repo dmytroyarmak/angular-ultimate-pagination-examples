@@ -1,0 +1,83 @@
+<form [formGroup]="paginationConfigForm">
+  <fieldset>
+    <legend>Component configuration</legend>
+    <div>
+      <label for="total-pages">
+        Total pages:
+      </label>
+      <input
+        type="number"
+        id="total-pages"
+        formControlName="totalPages"
+        min="1"
+      />
+    </div>
+
+    <div>
+      <label for="current-page">
+        Current page:
+      </label>
+      <input
+        type="number"
+        id="current-page"
+        formControlName="currentPage"
+        min="1"
+        [max]="paginationConfigForm.controls['totalPages'].value"
+      />
+    </div>
+
+    <div>
+      <label for="boundary-pages-range">
+        Boundary pages range:
+      </label>
+      <input
+        type="number"
+        id="boundary-pages-range"
+        formControlName="boundaryPagesRange"
+        min="0"
+      />
+    </div>
+
+    <div>
+      <label for="sibling-pages-range">
+        Sibling pages range:
+      </label>
+      <input
+        type="number"
+        id="sibling-pages-range"
+        formControlName="siblingPagesRange"
+        min="0"
+      />
+    </div>
+
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          formControlName="hidePreviousAndNextPageLinks"
+        />
+        Hide previous and next page links
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          formControlName="hideFirstAndLastPageLinks"
+        />
+        Hide first and last page links
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <input
+          type="checkbox"
+          formControlName="hideEllipsis"
+        />
+        Hide ellipsis
+      </label>
+    </div>
+  </fieldset>
+</form>

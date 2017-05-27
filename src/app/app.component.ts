@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  config = {
+      totalPages: 10,
+      currentPage: 1,
+      boundaryPagesRange: 1,
+      siblingPagesRange: 1,
+      hidePreviousAndNextPageLinks: false,
+      hideFirstAndLastPageLinks: false,
+      hideEllipsis: false
+  };
 }
