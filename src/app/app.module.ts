@@ -17,7 +17,7 @@ import { PaginationItemPreviousPageComponent } from './pagination-item-previous-
 import { PaginationItemNextPageComponent } from './pagination-item-next-page/pagination-item-next-page.component';
 import { PaginationItemLastPageComponent } from './pagination-item-last-page/pagination-item-last-page.component';
 import { PaginationItemComponentOutletDirective } from './pagination-item-component-outlet/pagination-item-component-outlet.directive';
-import { PAGE_COMPONENT, ELLIPSIS_COMPONENT, FIRST_PAGE_LINK_COMPONENT, PREVIOUS_PAGE_LINK_COMPONENT, NEXT_PAGE_LINK_COMPONENT, LAST_PAGE_LINK_COMPONENT } from './constants';
+import { PaginationThemeBasicDirective } from './pagination-theme-basic/pagination-theme-basic.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import { PAGE_COMPONENT, ELLIPSIS_COMPONENT, FIRST_PAGE_LINK_COMPONENT, PREVIOUS
     PaginationItemPreviousPageComponent,
     PaginationItemNextPageComponent,
     PaginationItemLastPageComponent,
-    PaginationItemComponentOutletDirective
+    PaginationItemComponentOutletDirective,
+    PaginationThemeBasicDirective
   ],
   entryComponents: [
     PaginationItemPageComponent,
@@ -48,14 +49,6 @@ import { PAGE_COMPONENT, ELLIPSIS_COMPONENT, FIRST_PAGE_LINK_COMPONENT, PREVIOUS
     BrowserModule,
     ReactiveFormsModule,
     HttpModule
-  ],
-  providers: [
-    {provide: PAGE_COMPONENT, useValue: PaginationItemPageComponent},
-    {provide: ELLIPSIS_COMPONENT, useValue: PaginationItemEllipsisComponent},
-    {provide: FIRST_PAGE_LINK_COMPONENT, useValue: PaginationItemFirstPageComponent},
-    {provide: PREVIOUS_PAGE_LINK_COMPONENT, useValue: PaginationItemPreviousPageComponent},
-    {provide: NEXT_PAGE_LINK_COMPONENT, useValue: PaginationItemNextPageComponent},
-    {provide: LAST_PAGE_LINK_COMPONENT, useValue: PaginationItemLastPageComponent}
   ],
   bootstrap: [AppComponent]
 })
