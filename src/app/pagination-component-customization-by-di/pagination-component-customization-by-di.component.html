@@ -1,0 +1,7 @@
+<ng-container *ngFor="let item of paginationModel; trackBy: trackByKey">
+  <ng-template
+    [ultimatePaginationItemComponentOutlet]="getComponentForItem(item)"
+    [item]="item"
+    (activate)="onItemActivate(item)"
+  ></ng-template>
+</ng-container>
